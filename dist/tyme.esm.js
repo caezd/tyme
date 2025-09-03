@@ -1,4 +1,6 @@
-import { isElement as isEl, pad } from "./utils.js";
+const isElement = (v) => v && typeof v === "object" && v.nodeType === 1;
+const pad = (n, len = 2) => String(n).padStart(len, "0");
+
 /* Tyme v0.1 — Normalisateur de dates pour Forumactif
  * API:
  *   const t = new Tyme(input, { locale: 'fr-CA', now: () => new Date() });
@@ -384,7 +386,7 @@ function parseInput(input) {
     const raw =
         typeof input === "string"
             ? input
-            : isEl(input)
+            : isElement(input)
             ? input.textContent || ""
             : String(input ?? "");
     const s = preClean(raw);
@@ -421,4 +423,5 @@ Tyme.parse = parseInput;
 Tyme.format = formatDate; // utilitaire si besoin
 Tyme.fromNow = (input, opts) => fromNow(parseInput(input), opts);
 
-export default Tyme;
+export { Tyme as default };
+//# sourceMappingURL=tyme.esm.js.map

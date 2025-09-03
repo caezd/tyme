@@ -3,6 +3,7 @@
     "version": "1.0.0",
     "description": "",
     "main": "index.js",
+    "type": "module",
     "scripts": {
         "watch": "rollup -c -w",
         "dev": "concurrently -k \"rollup -c -w\" \"http-server dist -c-1 --cors\"",
@@ -19,6 +20,7 @@
         "concurrently": "^9.2.1",
         "http-server": "^14.1.1",
         "rimraf": "^6.0.1",
+        "rollup": "^4.50.0",
         "rollup-plugin-css-only": "^4.5.4"
     }
 }
