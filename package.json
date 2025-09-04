@@ -1,6 +1,6 @@
 {
     "name": "@poumon/tyme",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Normalisateur de dates pour Forumactif",
     "main": "index.js",
     "type": "module",
