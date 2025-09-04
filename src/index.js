@@ -1,13 +1,11 @@
 import { isElement as isEl, pad } from "./utils.js";
-/* Tyme v0.1 — Normalisateur de dates pour Forumactif
- * API:
- *   const t = new Tyme(input, { locale: 'fr-CA', now: () => new Date() });
- *   t.parseToFormat('YYYY-MM-DD HH:mm')  -> "2025-03-01 22:48"
- *   t.fromNow()                          -> "il y a 2 heures" / "dans 5 minutes"
- *
- * Extensibility:
- *   Tyme.addPattern({ regex, process(match) => Date });
- *   Tyme.parseWithPlugins("...") -> Date
+/**
+ * Tyme v0.1 — Normalisateur de dates pour Forumactif
+ * API :
+ *    Tyme('8 juin 2025').fromNow()
+ *    Tyme('01/03/25, 10:48 pm').parseToFormat('YYYY-MM-DD HH:mm')
+ *    new Tyme(element).parseToFormat('DD/MM/YYYY')
+ * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#date_time_string_format
  */
 
 function formatDate(date, fmt = "YYYY-MM-DD HH:mm") {

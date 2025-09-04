@@ -22,7 +22,8 @@ export default [
         plugins: [
             resolve(),
             commonjs(),
-            css({ output: "bundle.css" }) /*terser()*/,
+            css({ output: "bundle.css" }),
+            terser(),
         ],
     },
 ];
