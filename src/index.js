@@ -1,6 +1,6 @@
 import { isElement as isEl, pad } from "./utils.js";
 /**
- * Tyme v0.1 — Normalisateur de dates pour Forumactif
+ * Tÿme — Normalisateur de dates pour Forumactif
  * API :
  *    Tyme('8 juin 2025').fromNow()
  *    Tyme('01/03/25, 10:48 pm').parseToFormat('YYYY-MM-DD HH:mm')
